@@ -7,9 +7,7 @@ on:
       - 'ontology/vsml.ttl'
       - 'docs/**'
       - 'instances/**'
-      - '.github/workflows/publish.yml'
-workflow_dispatch:
-
+      
 jobs:
   publish:
     runs-on: ubuntu-latest
