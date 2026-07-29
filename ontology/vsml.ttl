@@ -1,0 +1,72 @@
+@prefix vsml: <https://vsml.no/> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+# Ontology metadata 
+
+<https://vsml.no/>
+    a owl:Ontology ;
+    dcterms:title "Vessel Markup Language (VsML)" ;
+    dcterms:description "A Vocabulary for Federated Ship Design" ;
+    dcterms:creator "JanBronson" ;
+    dcterms:created "2026" ;
+    owl:versionInfo "0.1.0" .
+
+# Classes
+
+vsml:Ship
+    a owl:Class ;
+    rdfs:label "Ship" ;
+    skos:definition "A maritime vessel" ;
+    rdfs:isDefinedBy <https://vsml.no/> .
+
+vsml:Hull
+    a owl:Class ;
+    rdfs:label "Hull" ;
+    skos:definition "Watertight body of the ship" ;
+    rdfs:subClassOf vsml:Ship ;
+    rdfs:isDefinedBy <https://vsml.no/> .
+
+vsml:Particulars
+    a owl:Class ;
+    rdfs:label "Particulars" ;
+    skos:definition "Basic form and design parameters" ;
+    rdfs:subClassOf vsml:Ship ;
+    rdfs:isDefinedBy <https://vsml.no/> .
+
+# Properties
+
+vsml:authoredBy
+    a owl:ObjectProperty ;
+    rdfs:label "authored by" ;
+    skos:definition "Relates a drawing or document to the designer" ;
+    rdfs:isDefinedBy <https://vsml.no/> .
+
+vsml:boundBy
+    a owl:ObjectProperty ;
+    rdfs:label "bound by" ;
+    skos:definition "Relates boundaries within structure" ;
+    rdfs:isDefinedBy <https://vsml.no/> .
+
+# Named individuals (vessel-specific)
+
+vsml:Extremebreadth
+    a owl:NamedIndividual ;
+    rdfs:label "Extreme breadth" ;
+    skos:definition "Maximum breadth of the vessel measured to the outer surface" ;
+    rdfs:isDefinedBy <https://vsml.no/> .
+
+vsml:Mastheight
+    a owl:NamedIndividual ;
+    rdfs:label "Mast height" ;
+    skos:definition "Height of the mast above baseline" ;
+    rdfs:isDefinedBy <https://vsml.no/> .
+
+vsml:VolumeDisplacement
+    a owl:NamedIndividual ;
+    rdfs:label "Volume displacement" ;
+    skos:definition "Volume of water displaced by the vessel hull" ;
+    rdfs:isDefinedBy <https://vsml.no/> .
