@@ -239,6 +239,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
+          git pull --rebase origin main
           git add ontology/vsml.owl ontology/vsml.jsonld docs/index.html
           git diff --staged --quiet || git commit -m "Auto-generate vsml.owl, vsml.jsonld, docs/index.html from vsml.ttl [skip ci]"
           git push
