@@ -114,6 +114,33 @@
       max-width: 1100px; margin: 0 auto;
       padding: 48px 48px 44px;
       position: relative; z-index: 1;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 48px;
+    }
+    .hero-text { flex: 1; }
+    .hero-meta {
+      display: flex;
+      gap: 32px;
+      flex-shrink: 0;
+    }
+    .hero-meta-item {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 2px;
+    }
+    .hero-meta-num {
+      font-family: var(--mono);
+      font-size: 22px; font-weight: 500;
+      color: #f0f4f8; line-height: 1;
+    }
+    .hero-meta-label {
+      font-family: var(--mono);
+      font-size: 10px; letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: rgba(240,244,248,0.35);
     }
     .hero-eyebrow {
       display: inline-block;
@@ -326,6 +353,9 @@
       .source-grid { grid-template-columns: 1fr; }
       .instance-card { flex-direction: column; }
       .hero h1 { font-size: 30px; }
+      .hero { flex-direction: column; }
+      .hero-meta { justify-content: flex-start; }
+      .hero-meta-item { align-items: flex-start; }
     }
     @media (prefers-reduced-motion: reduce) {
       *, *::before, *::after { animation: none !important; }
@@ -349,11 +379,10 @@
 </nav>
 
 <!-- ── Hero ─────────────────────────────────────────────────── -->
-<div class="hero-wrap">
-  <div class="dot-bg"></div>
-  <div class="hero">
+<div class="hero">
+  <div class="hero-text">
     <div class="hero-eyebrow">Version 0.1.0 · Open ontology vocabulary</div>
-    <h1>The vocabulary for <strong>federated ship design.</strong></h1>
+    <h1>The semantic layer for <strong>federated ship design.</strong></h1>
     <p class="hero-desc">
       VsML is an open ontology vocabulary bridging OCX Schema, SFI Index System,
       and W3C standards — exposing rich semantic relationships across maritime vessel data.
@@ -362,6 +391,24 @@
       <a class="btn-primary" href="#vocabulary">Explore vocabulary</a>
       <a class="btn-outline" href="ontology/vsml.ttl">Download .ttl</a>
       <a class="btn-outline" href="https://vsml.community">Project site ↗</a>
+    </div>
+  </div>
+  <div class="hero-meta">
+    <div class="hero-meta-item">
+      <span class="hero-meta-num">117</span>
+      <span class="hero-meta-label">concepts</span>
+    </div>
+    <div class="hero-meta-item">
+      <span class="hero-meta-num">5</span>
+      <span class="hero-meta-label">ontologies</span>
+    </div>
+    <div class="hero-meta-item">
+      <span class="hero-meta-num">30</span>
+      <span class="hero-meta-label">triples</span>
+    </div>
+    <div class="hero-meta-item">
+      <span class="hero-meta-num">6</span>
+      <span class="hero-meta-label">rel. types</span>
     </div>
   </div>
 </div>
