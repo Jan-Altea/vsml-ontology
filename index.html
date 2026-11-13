@@ -523,29 +523,46 @@
 <section id="instance">
   <div class="section-inner">
     <p class="section-eyebrow">Instance data</p>
-    <h2 class="section-title">Research vessel Gunnerus</h2>
-    <div class="instance-card">
-      <div>
-        <div class="instance-label">Vessel</div>
-        <div class="instance-name">RV Gunnerus</div>
-        <div class="instance-desc">
-          RDF instance data for the research vessel Gunnerus, operated by
-          <a href="https://www.ntnu.edu/" style="color:var(--accent)">NTNU</a>.
-          Covers 30 grounded concepts across 6 relationship types — equivalence,
-          spatial, functional, mathematical, business, and cross-ontology triples.
+    <h2 class="section-title">Vessel instances</h2>
+
+    <div style="display: grid; gap: 16px;">
+      <article class="instance-card" aria-labelledby="gunnerus-card-title">
+        <div>
+          <div class="instance-label">RDF instance data</div>
+          <div class="instance-name" id="gunnerus-card-title">RV Gunnerus</div>
+          <div class="instance-desc">
+            RDF instance data for the research vessel Gunnerus, operated by
+            <a href="https://www.ntnu.edu/" style="color:var(--accent)">NTNU</a>.
+            Covers 30 grounded concepts across 6 relationship types — equivalence,
+            spatial, functional, mathematical, business, and cross-ontology triples.
+          </div>
+          <div class="instance-links">
+            <a class="instance-link" href="instances/gunnerus.ttl">gunnerus.ttl</a>
+            <a class="instance-link" href="instances/gunnerus_graph.xml">gunnerus_graph.xml</a>
+            <a class="instance-link" href="https://www.ntnu.edu/">NTNU →</a>
+          </div>
         </div>
-        <div class="instance-links">
-          <a class="instance-link" href="instances/gunnerus.ttl">gunnerus.ttl</a>
-          <a class="instance-link" href="instances/gunnerus_graph.xml">gunnerus_graph.xml</a>
-          <a class="instance-link" href="https://www.ntnu.edu/">NTNU →</a>
+        <div class="instance-meta">
+          <div class="meta-item"><strong>30</strong>grounded concepts</div>
+          <div class="meta-item"><strong>6</strong>relationship types</div>
+          <div class="meta-item"><strong>117</strong>concept reference</div>
+          <div class="meta-item"><strong>0.1.0</strong>version</div>
         </div>
-      </div>
-      <div class="instance-meta">
-        <div class="meta-item"><strong>30</strong>grounded concepts</div>
-        <div class="meta-item"><strong>6</strong>relationship types</div>
-        <div class="meta-item"><strong>117</strong>concept reference</div>
-        <div class="meta-item"><strong>0.1.0</strong>version</div>
-      </div>
+      </article>
+
+      <article class="instance-card" aria-labelledby="psv-card-title">
+        <div>
+          <div class="instance-label">Interactive demonstration</div>
+          <div class="instance-name" id="psv-card-title">Platform supply vessel (PSV)</div>
+          <div class="instance-desc">
+            Explore how the 3D vessel model connects to ship systems,
+            design calculations, and business information in VsML.
+          </div>
+          <div class="instance-links">
+            <a class="instance-link" href="/instances/psv/">View PSV instance →</a>
+          </div>
+        </div>
+      </article>
     </div>
   </div>
 </section>
